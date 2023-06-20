@@ -3,7 +3,7 @@ This is a simple bot that uses google bard api to talk to a user. It's got a few
 # Setup
 Clone the repository with
 ~~~
-git clone https://github.com/https://github.com/wertytop/bard-bot
+git clone https://github.com/wertytop/bard-bot
 ~~~
 Then cd into the folder
 ~~~
