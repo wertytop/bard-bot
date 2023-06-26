@@ -18,6 +18,7 @@ async def diffusion(self, prompt: str):
     load_dotenv()
     token = os.getenv("BARD_TOKEN")
     bard = Bard(token=token)
+    print(prompt)
     answer = bard.get_answer(prompt+", you must keep this under 1000 characters")['content']
     print(answer, prompt)
     await self.followup.send(answer)
@@ -38,6 +39,7 @@ async def diffusion(self):
 async def on_ready():
     print("Bot has booted!")
     await tree.sync()
+    await client.change_presence(activity=discord.Game(name='Listening for /bard'))
 
 
 load_dotenv()
